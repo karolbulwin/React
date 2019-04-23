@@ -150,7 +150,6 @@ class AppCard extends React.Component {
   }
   state = {
     profiles: testData
-
   }
   render() {
     return (
