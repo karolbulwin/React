@@ -8,6 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
+        <AppCard />
       </header>
     </div>
   );
@@ -82,6 +83,35 @@ class Counter extends React.Component {
         <Button increment={this.increment} incrementValue={100}/>
         <Display count={this.state.count}/>
         <Time /> 
+      </div>
+    )
+  }
+}
+
+class Card extends React.Component {
+  render() {
+    return(
+      <div className='github-profile'>
+        <img src='https://via.placeholder.com/75' alt=''></img>
+        <div className='info'>
+          <div className='name'>name</div>
+          <div className='company'>company</div>
+        </div>
+      </div>
+    )
+  }
+}
+
+class AppCard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.title = 'The GitHub Cards App';
+  }
+  render() {
+    return (
+      <div class='appCard'>
+        <div className='header'>{this.title}</div>
+        <Card />
       </div>
     )
   }
