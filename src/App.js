@@ -39,6 +39,7 @@ class Display extends React.Component {
 class Counter extends React.Component {
   constructor(props) {
     super(props);
+    this.name = 'React button counter';
     this.state = {
       count: 5
     };
