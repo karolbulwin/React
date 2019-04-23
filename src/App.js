@@ -33,13 +33,13 @@ class Button extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0
+      count: 5
     };
     this.increment = this.increment.bind(this);
   }
   increment() {
     this.setState({
-      count: this.state.count + 1
+      count: this.state.count * 2
     }) 
   }
 
