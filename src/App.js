@@ -101,8 +101,8 @@ class Card extends React.Component {
       <div className='github-profile'>
         <img src='https://via.placeholder.com/75' alt=''></img>
         <div className='info'>
-          <div className='name'>name</div>
-          <div className='company'>company</div>
+          <div className='name'>{profile.name}</div>
+          <div className='company'>{profile.company}</div>
         </div>
       </div>
     )
