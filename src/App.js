@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import logo from './logo.svg';
 import './App.scss';
 
@@ -152,11 +153,17 @@ class AppCard extends React.Component {
   state = {
     profiles: testData
   }
+  addNewProfile = (profileData) => {
+    console.log(profileData);
+    this.setState(prevState => ({
+      profiles: [...prevState.profiles, profileData]
+    }));
+  };
   render() {
     return (
       <div class='appCard'>
         <div className='header'>{this.title}</div>
-        <Form />
+        <Form onSubmit={this.addNewProfile}/>
         <CardList profiles={this.state.profiles} />
       </div>
     )
