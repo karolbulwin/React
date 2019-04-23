@@ -36,7 +36,7 @@ class Display extends React.Component {
   }
 }
 
-class Button extends React.Component {
+class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
