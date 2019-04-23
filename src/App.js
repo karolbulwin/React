@@ -137,6 +137,7 @@ class AppCard extends React.Component {
     return (
       <div class='appCard'>
         <div className='header'>{this.title}</div>
+        <Form />
         <CardList />
       </div>
     )
