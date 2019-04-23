@@ -85,7 +85,7 @@ class Counter extends React.Component {
   }
   render() {
     return(
-      <div>
+      <div className="Counter">
         <Hello name={this.name}/>
         <Button increment={this.increment} incrementValue={1}/>
         <Button increment={this.increment} incrementValue={5}/>
