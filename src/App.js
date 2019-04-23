@@ -29,9 +29,16 @@ function Hello(props) {
 }
 
 class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.props.increment(this.props.incrementValue)
+  }
   render() {
     return(
-      <button onClick={() => this.props.increment(this.props.incrementValue)}>{this.props.incrementValue}</button>
+      <button onClick={this.handleClick}>{this.props.incrementValue}</button>
     )
   }
 }
