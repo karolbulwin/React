@@ -31,3 +31,9 @@
     transform: rotate(360deg);
   }
 }
+
+.Counter {
+  border: 1px solid salmon;
+  padding: 1em;
+  margin: .3em;
+}
