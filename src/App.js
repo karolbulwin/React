@@ -24,8 +24,16 @@ function App() {
   );
 }
 
-function Hello() {
-  return <div>Hello React!</div>
+function Hello(props) {
+  return <p>Say Hello to {props.name}!</p>
+}
+
+class Display extends React.Component {
+  render() {
+    return(
+      <p>Double me: {this.props.count}</p>
+    )
+  }
 }
 
 class Button extends React.Component {
