@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Counter {
+  font-size: calc(10px + 2vmin);
+  border: 1px solid salmon;
+  border-radius: .1em;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.308);
+  padding: 1em;
+  margin: .3em;
+  button {
+    font-size: .8em;
+    padding: .3em .9em;
+    margin: 0 .4em;
+    border-radius: .2em;
+    box-shadow: 0 1px 9px 3px rgba(0, 0, 0, 0.308);
+    &:hover {
+      box-shadow: 0 1px 9px 5px rgba(0, 0, 0, 0.608);
+    }
+    &:active {
+      box-shadow: 0 1px 9px 5px rgba(0, 0, 0, 0.908);
+    }
+  } 
+}
+
+.appCard{
+  width: 100%;
+  .header {
+    font-size: 1.5em;
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .github-profile {
+    display: flex;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    img {
+      max-height: 75px;
+      max-width: 75px;
+      background-color: #282c34;
+      flex: 20%;
+      margin-left: 1.5em;
+      margin-right: 1em;
+      border-radius: .2em;
+    }
+    .info {
+      flex: 80%;
+      text-align: left;
+      margin-right: 1.5em;
+      background-color: lighten($color: #282c34, $amount: 7%);
+      border-radius: .2em;
+      .name {
+        font-weight: bold;
+        font-size: 1.3em;
+        line-height: 1.2em;
+        padding-bottom: .01em;
+      }
+    }
+  }
+}
+
+
+
