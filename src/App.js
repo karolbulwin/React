@@ -138,7 +138,7 @@ class AppCard extends React.Component {
       <div class='appCard'>
         <div className='header'>{this.title}</div>
         <Form />
-        <CardList />
+        <CardList profiles={testData}/>
       </div>
     )
   }
