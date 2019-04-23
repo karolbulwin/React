@@ -125,6 +125,8 @@ class Form extends React.Component {
     event.preventDefault();
     console.log(this.state.userName);
   };
+  handleInput = event => this.setState({ userName: event.target.value });
+  
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
@@ -132,7 +134,7 @@ class Form extends React.Component {
         type='text'
         placeholder='GitHub username'
         value={this.state.userName}
-        onChange={event => this.setState({ userName: event.target.value })}
+        onChange={this.handleInput}
         required>
         </input>
         <button>Add card</button>
