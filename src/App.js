@@ -88,6 +88,12 @@ class Counter extends React.Component {
   }
 }
 
+const testData = [
+  {name: 'aaa', company: 'abbb', avatar_url: 'https://via.placeholder.com/75' },
+  {name: 'bbb', company: 'bccc', avatar_url: 'https://via.placeholder.com/75' },
+  {name: 'ccc', company: 'cddd', avatar_url: 'https://via.placeholder.com/75' }
+]
+
 class Card extends React.Component {
   render() {
     return(
