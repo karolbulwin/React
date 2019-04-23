@@ -102,6 +102,17 @@ class Card extends React.Component {
   }
 }
 
+const CardList = (props) => {
+  return(
+  <div>
+    <Card {...testData[0]}/>
+    <Card {...testData[1]}/>
+    <Card {...testData[2]}/>
+
+  </div>
+  )
+}
+
 class AppCard extends React.Component {
   constructor(props) {
     super(props);
@@ -111,7 +122,7 @@ class AppCard extends React.Component {
     return (
       <div class='appCard'>
         <div className='header'>{this.title}</div>
-        <Card />
+        <CardList />
       </div>
     )
   }
