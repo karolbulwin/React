@@ -50,6 +50,25 @@ class Display extends React.Component {
   }
 }
 
+class Time extends React.Component {
+  constructor(props) {
+    super(props);
+    this.time = new Date().toLocaleTimeString();
+  }
+  componentDidMount() {
+    setInterval( () => {
+      this.setState({
+        time: this.time = new Date().toLocaleTimeString()
+      });
+    }, 1000);
+  }
+  render() {
+    return(
+      <p>{this.time}</p>
+    )
+  }
+}
+
 class Counter extends React.Component {
   constructor(props) {
     super(props);
@@ -73,6 +92,7 @@ class Counter extends React.Component {
         <Button increment={this.increment} incrementValue={10}/>
         <Button increment={this.increment} incrementValue={100}/>
         <Display count={this.state.count}/>
+        <Time /> 
       </div>
     )
   }
