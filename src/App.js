@@ -96,6 +96,7 @@ const testData = [
 
 class Card extends React.Component {
   render() {
+    const profile = this.props;
     return(
       <div className='github-profile'>
         <img src='https://via.placeholder.com/75' alt=''></img>
