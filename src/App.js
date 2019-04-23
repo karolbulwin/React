@@ -61,7 +61,10 @@ class Counter extends React.Component {
     return(
       <div>
         <Hello name={this.name}/>
-        <Button increment={this.increment}/>
+        <Button increment={this.increment} incrementValue={1}/>
+        <Button increment={this.increment} incrementValue={5}/>
+        <Button increment={this.increment} incrementValue={10}/>
+        <Button increment={this.increment} incrementValue={100}/>
         <Display count={this.state.count}/>
       </div>
     )
