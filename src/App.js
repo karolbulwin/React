@@ -18,9 +18,36 @@ function App() {
         >
           Learn React
         </a>
+        <Hello />
+        <Button />
       </header>
     </div>
   );
+}
+
+function Hello() {
+  return <div>Hello React!</div>
+}
+
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+    this.increment = this.increment.bind(this);
+  }
+  increment() {
+    this.setState({
+      count: this.state.count + 1
+    }) 
+  }
+
+  render() {
+    return(
+      <button onClick='{this.increment}'>Test {this.state.count}</button>
+    )
+  }
 }
 
 export default App;
