@@ -132,13 +132,16 @@ class AppCard extends React.Component {
   constructor(props) {
     super(props);
     this.title = 'The GitHub Cards App';
+    this.state = {
+      profiles: testData
+    };
   }
   render() {
     return (
       <div class='appCard'>
         <div className='header'>{this.title}</div>
         <Form />
-        <CardList profiles={testData}/>
+        <CardList profiles={this.state.profiles}/>
       </div>
     )
   }
