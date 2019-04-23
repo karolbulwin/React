@@ -28,6 +28,13 @@ function Hello(props) {
   return <p>Say Hello to {props.name}!</p>
 }
 
+class Button extends React.Component {
+  render() {
+    return(
+      <button onClick={this.props.increment}>Click ME!</button>
+    )
+  }
+}
 class Display extends React.Component {
   render() {
     return(
@@ -54,7 +61,7 @@ class Counter extends React.Component {
     return(
       <div>
         <Hello name={this.name}/>
-        <button onClick={this.increment}>Click ME!</button>
+        <Button increment={this.increment}/>
         <Display count={this.state.count}/>
       </div>
     )
