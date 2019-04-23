@@ -121,7 +121,7 @@ class Form extends React.Component {
   state = {
     userName: ''
   };
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     console.log(this.state.userName);
   };
