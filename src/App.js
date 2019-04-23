@@ -112,9 +112,10 @@ class Card extends React.Component {
 const CardList = (props) => {
   return(
   <div>
-    <Card {...testData[0]}/>
-    <Card {...testData[1]}/>
-    <Card {...testData[2]}/>
+    {props.profiles.map(profile => <Card {...profile}/>)}
+  </div>
+  )
+}
 
   </div>
   )
