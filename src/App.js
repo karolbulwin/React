@@ -31,7 +31,7 @@ function Hello(props) {
 class Button extends React.Component {
   render() {
     return(
-      <button onClick={this.props.increment}>Click ME!</button>
+      <button onClick={() => this.props.increment(this.props.incrementValue)}>{this.props.incrementValue}</button>
     )
   }
 }
@@ -52,9 +52,9 @@ class Counter extends React.Component {
     };
     this.increment = this.increment.bind(this);
   }
-  increment() {
+  increment(incrementValue) {
     this.setState({
-      count: this.state.count * 2
+      count: this.state.count + incrementValue
     }) 
   }
   render() {
