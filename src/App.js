@@ -89,12 +89,6 @@ class Counter extends React.Component {
   }
 }
 
-const testData = [
-  { name: 'aaa', company: 'abbb', avatar_url: 'https://via.placeholder.com/75' },
-  { name: 'bbb', company: 'bccc', avatar_url: 'https://via.placeholder.com/75' },
-  { name: 'ccc', company: 'cddd', avatar_url: 'https://via.placeholder.com/75' }
-]
-
 class Card extends React.Component {
   render() {
     const profile = this.props;
@@ -151,7 +145,7 @@ class AppCard extends React.Component {
     this.title = 'The GitHub Cards App';
   }
   state = {
-    profiles: testData
+    profiles: []
   }
   addNewProfile = (profileData) => {
     console.log(profileData);
