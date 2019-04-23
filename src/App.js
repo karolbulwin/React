@@ -45,7 +45,7 @@ class Button extends React.Component {
 
   render() {
     return(
-      <button onClick='{this.increment}'>Test {this.state.count}</button>
+      <button onClick={this.increment}>Test {this.state.count}</button>
     )
   }
 }
