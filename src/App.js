@@ -117,8 +117,15 @@ const CardList = (props) => {
   )
 }
 
-  </div>
-  )
+class Form extends React.Component {
+  render() {
+    return(
+      <form>
+        <input type='text' placeholder='GitHub username'></input>
+        <button>Add card</button>
+      </form>
+    )
+  }
 }
 
 class AppCard extends React.Component {
