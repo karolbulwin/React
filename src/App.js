@@ -27,14 +27,14 @@ class Button extends React.Component {
     this.props.increment(this.props.incrementValue)
   }
   render() {
-    return(
+    return (
       <button onClick={this.handleClick}>{this.props.incrementValue}</button>
     )
   }
 }
 class Display extends React.Component {
   render() {
-    return(
+    return (
       <p>Double me: {this.props.count}</p>
     )
   }
@@ -46,14 +46,14 @@ class Time extends React.Component {
     this.time = new Date().toLocaleTimeString();
   }
   componentDidMount() {
-    setInterval( () => {
+    setInterval(() => {
       this.setState({
         time: this.time = new Date().toLocaleTimeString()
       });
     }, 1000);
   }
   render() {
-    return(
+    return (
       <p>{this.time}</p>
     )
   }
@@ -71,33 +71,33 @@ class Counter extends React.Component {
   increment(incrementValue) {
     this.setState({
       count: this.state.count + incrementValue
-    }) 
+    })
   }
   render() {
-    return(
+    return (
       <div className="Counter">
-        <Hello name={this.name}/>
-        <Button increment={this.increment} incrementValue={1}/>
-        <Button increment={this.increment} incrementValue={5}/>
-        <Button increment={this.increment} incrementValue={10}/>
-        <Button increment={this.increment} incrementValue={100}/>
-        <Display count={this.state.count}/>
-        <Time /> 
+        <Hello name={this.name} />
+        <Button increment={this.increment} incrementValue={1} />
+        <Button increment={this.increment} incrementValue={5} />
+        <Button increment={this.increment} incrementValue={10} />
+        <Button increment={this.increment} incrementValue={100} />
+        <Display count={this.state.count} />
+        <Time />
       </div>
     )
   }
 }
 
 const testData = [
-  {name: 'aaa', company: 'abbb', avatar_url: 'https://via.placeholder.com/75' },
-  {name: 'bbb', company: 'bccc', avatar_url: 'https://via.placeholder.com/75' },
-  {name: 'ccc', company: 'cddd', avatar_url: 'https://via.placeholder.com/75' }
+  { name: 'aaa', company: 'abbb', avatar_url: 'https://via.placeholder.com/75' },
+  { name: 'bbb', company: 'bccc', avatar_url: 'https://via.placeholder.com/75' },
+  { name: 'ccc', company: 'cddd', avatar_url: 'https://via.placeholder.com/75' }
 ]
 
 class Card extends React.Component {
   render() {
     const profile = this.props;
-    return(
+    return (
       <div className='github-profile'>
         <img src='https://via.placeholder.com/75' alt=''></img>
         <div className='info'>
@@ -110,10 +110,10 @@ class Card extends React.Component {
 }
 
 const CardList = (props) => {
-  return(
-  <div>
-    {props.profiles.map(profile => <Card {...profile}/>)}
-  </div>
+  return (
+    <div>
+      {props.profiles.map(profile => <Card {...profile} />)}
+    </div>
   )
 }
 
@@ -155,7 +155,7 @@ class AppCard extends React.Component {
       <div class='appCard'>
         <div className='header'>{this.title}</div>
         <Form />
-        <CardList profiles={this.state.profiles}/>
+        <CardList profiles={this.state.profiles} />
       </div>
     )
   }
