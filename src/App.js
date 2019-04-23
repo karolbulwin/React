@@ -50,10 +50,13 @@ class Counter extends React.Component {
       count: this.state.count * 2
     }) 
   }
-
   render() {
     return(
-      <button onClick={this.increment}>Test {this.state.count}</button>
+      <div>
+        <Hello name={this.name}/>
+        <button onClick={this.increment}>Click ME!</button>
+        <Display count={this.state.count}/>
+      </div>
     )
   }
 }
