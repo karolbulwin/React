@@ -96,6 +96,8 @@
     display: flex;
     margin-bottom: 1em;
     margin-top: 1em;
+    background-color: lighten($color: #282c34, $amount: 2%);
+    padding: 0.4em;
     img {
       max-height: 75px;
       max-width: 75px;
