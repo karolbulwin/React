@@ -120,6 +120,7 @@ class Form extends React.Component {
     event.preventDefault();
     const res = await axios.get(`https://api.github.com/users/${this.state.userName}`);
     this.props.onSubmit(res.data);
+    this.setState({ userName: '' });
   };
   handleInput = event => this.setState({ userName: event.target.value });
   
