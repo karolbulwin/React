@@ -80,8 +80,22 @@
       .name {
         font-weight: bold;
         font-size: 1.3em;
-        line-height: 1.2em;
-        padding-bottom: .01em;
+      }
+      > div {
+      padding: .1em
+      }
+      a {
+        cursor: pointer;
+        color:  darken($color: red, $amount: 5%);
+        &:visited {
+          color: darken($color: red, $amount: 30%)
+        }
+        &:hover {
+          color: darken($color: red, $amount: 10%);
+        }
+        &:active {
+          color: darken($color: red, $amount: 15%);
+        }
       }
     }
   }
