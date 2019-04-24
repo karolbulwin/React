@@ -55,6 +55,37 @@
 
 .appCard{
   width: 100%;
+  padding: 0 0 2em 0;
+  form {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.342);
+    padding: 1em;
+    input, button {
+      font-size: 1em;
+      border: none;
+      box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.601);
+    }
+    input {
+      border-top-left-radius: .2em;
+      border-bottom-left-radius: .2em;
+      padding: .5em 0;
+      text-align: center;
+      width: calc(300px + 10vmin);
+    }
+    button {
+      border-top-right-radius: .2em;
+      border-bottom-right-radius: .2em;
+      border: none;
+      padding: .5em 1em;
+      color: white;
+      background-color: rgb(73, 119, 4);
+      &:hover {
+        background-color: darken($color: rgb(73, 119, 4), $amount: 5%);
+      }
+      &:active {
+        background-color: darken($color: rgb(73, 119, 4), $amount: 10%);
+      }
+    }
+  }
   .header {
     font-size: 1.5em;
     margin: 0;
