@@ -158,7 +158,7 @@ class AppCard extends React.Component {
   };
   render() {
     return (
-      <div class='appCard'>
+      <div className='appCard'>
         <div className='header'>{this.title}</div>
         <Form onSubmit={this.addNewProfile}/>
         <CardList profiles={this.state.profiles} />
