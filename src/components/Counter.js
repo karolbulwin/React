@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./Button";
 import { Display } from "./Display";
-import { Time } from "./Time";
+import { Clock } from "./Clock";
 import { Hello } from "./Hello";
 export class Counter extends React.Component {
   constructor(props) {
@@ -26,7 +26,7 @@ export class Counter extends React.Component {
         <Button increment={this.increment} incrementValue={10} />
         <Button increment={this.increment} incrementValue={100} />
         <Display count={this.state.count} />
-        <Time />
+        <Clock />
       </div>
     );
   }
